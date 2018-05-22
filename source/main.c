@@ -152,11 +152,11 @@ int kpayload(struct thread *td){
 	*(uint8_t*)(kernel_base + 0x117C4) = 0x00;
 	*(uint8_t*)(kernel_base + 0x117C5) = 0xC3;
 
-	(uint8_t)(kernel_base + 0x13F03F) = 0x31;
-	(uint8_t)(kernel_base + 0x13F040) = 0xC0;
-	(uint8_t)(kernel_base + 0x13F041) = 0x90;
-	(uint8_t)(kernel_base + 0x13F042) = 0x90;
-	(uint8_t)(kernel_base + 0x13F043) = 0x90;
+	*(uint8_t)(kernel_base + 0x13F03F) = 0x31;
+	*(uint8_t)(kernel_base + 0x13F040) = 0xC0;
+	*(uint8_t)(kernel_base + 0x13F041) = 0x90;
+	*(uint8_t)(kernel_base + 0x13F042) = 0x90;
+	*(uint8_t)(kernel_base + 0x13F043) = 0x90;
 
 	// Restore write protection
 	writeCr0(cr0);
